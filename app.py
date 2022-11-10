@@ -47,7 +47,7 @@ app = Flask(__name__)
 
 
 
-model = whisper.load_model("large")
+# model = whisper.load_model("large")
 
 
 @app.route('/')
