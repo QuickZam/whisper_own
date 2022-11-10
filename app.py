@@ -6,7 +6,7 @@ import os, whisper
 from datetime import timedelta 
 
 app = Flask(__name__) 
-model = whisper.load_model("large")
+model = whisper.load_model("tiny")
 
 class TranscriptGiver: 
     def __init__(self, link): 
