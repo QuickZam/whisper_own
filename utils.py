@@ -2,8 +2,12 @@ from pytube import YouTube
 import os, whisper 
 from datetime import timedelta 
 
+def init():
+    global model
+    model = whisper.load_model("large")
+
 class TranscriptGiver: 
-    def __init__(self, link, model): 
+    def __init__(self, link): 
         self.link = link 
         self.model = model 
 
