@@ -47,7 +47,9 @@ class TranscriptGiver:
 
         return file_path 
 
-
+def init():
+    global model
+    model = whisper.load_model("large")
 
 
 
@@ -59,7 +61,6 @@ def intro_page():
     
 @app.route('/give_files/<link>')
 def give_files(link):
-    model = whisper.load_model("large")
     obj = TranscriptGiver(link, model)
 
     file_path = obj.create_subtitle()
