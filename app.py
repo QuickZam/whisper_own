@@ -2,7 +2,7 @@ from flask import Flask, request, send_file
 # from utils import TranscriptGiver
 # import whisper 
 from pytube import YouTube 
-import os
+import os, whisper 
 from datetime import timedelta 
 
 
